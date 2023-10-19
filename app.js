@@ -73,5 +73,78 @@ Car.prototype.printInfo = function(){
 
 //=================================================================================================
 
+// Array destructuring
+const [first, second] = ['first item', 'second item];
+
+// rest operator
+const {name, ...details} = {name: 'Diane', occupation: 'Developer', location: 'USA'};
+
+// asynchronous promises
+new Promise((resolve, reject) => {
+ setTimeout(() => {
+   resolve('success');
+ }, 2000);
+});
+
+//====================================================================================
+
+//constructor functions can be written using the class keyword
+
+class Car {
+  constructor(make, model) {
+    this.make = make;
+    this.model = model;
+  }
+
+  honk() {
+    console.log('beep beep');
+  }
+}
+
+// car objects are still created and used the same way
+const car = new Car('Honda', 'Civic');
+car.honk();
+
+SAME AS: -----------------------------------------------------
+
+function Car(make, model) {
+  this.make = make;
+  this.model = model;
+}
+
+Car.prototype.honk = function() {
+  console.log('beep beep');
+};
+
+const car = new Car('Honda', 'Civic');
+car.honk();
+
+//====================================================================================
+
+//ES5 - (This works because Car() was hoisted into memory before new Car() was called.)
+
+const car = new Car('Honda', 'Civic');
+
+function Car(make, model) {
+ this.make = make;
+ this.model = model;
+}
+
+// ES6 - not hoisted (this will not work)
+
+// Uncaught ReferenceError: Cannot access 'Car' before initialization
+const car = new Car('Honda', 'Civic');
+
+class Car {
+ constructor(make, model) {
+   this.make = make;
+   this.model = model;
+ }
+}
+=================================================
+
+
+
 */
+
 
