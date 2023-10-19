@@ -1,3 +1,25 @@
+const Game = require('./lib/Game');
+
+new Game().initializeGame();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // example of a constructor function 
 /*
 function Car(make, model) {
@@ -12,6 +34,7 @@ console.log(car);
 
 //========================================================================================================================
 
+/*
 // good for one car but the (car dealership is selling 500 cars) 
 var car1 = {
   make: 'toyota',
@@ -50,4 +73,5 @@ Car.prototype.printInfo = function(){
 
 //=================================================================================================
 
+*/
 
